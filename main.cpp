@@ -15,7 +15,7 @@ int main ()
 	using std::scanf;
 	using std::getchar;
 	
-	short num = 76;
+	short num;
 	char nombre[50];
 	float tem;
 	printf("Your name?\n");
@@ -28,7 +28,7 @@ int main ()
 		}
 
 	printf("Gimme a number!\n");
-	while(scanf("%d", &num)!=1)
+	while(scanf("%hd", &num)!=1)
 	{
 		printf("try again, chief: ");
 		while (getchar() != '\n'); //clear buffer to discard invalid chars?
@@ -45,17 +45,19 @@ int main ()
 		
 	}
 
-	printf("Hello %s, what a STUPID name!\n", nombre);
+	printf("Hello %s, what a BEAUTIFUL name!\n", nombre);
 
-	printf("Your lucky number is: %i", ++num);
+	printf("Your lucky number is: %hd", num);
 
 	printf(", its address is: %p\n", (void*)&num);
 	
 	printf("also it is %.3f degrees out\n", tem);
 	
-	printf("If I were the tempreature, I could dream of no better home than %p, really.\n", (void*)&tem);
+	printf("The temperature can be found at %p, ain't that nifty?\n", (void*)&tem);
+	
+	printf("Also, the lucky number is actually %x!\n", num); //display in hexadecimal
 
-	printf("Aint that nifty!\n");
+
 	return 0;
 
 

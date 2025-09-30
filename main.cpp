@@ -15,7 +15,7 @@ int main ()
 	using std::scanf;
 	using std::getchar;
 	
-	int num = 76;
+	short num = 76;
 	char nombre[50];
 	float tem;
 	printf("Your name?\n");
@@ -27,8 +27,16 @@ int main ()
 		while (getchar() != '\n'); //clear buffer to discard invalid chars?
 		}
 
+	printf("Gimme a number!\n");
+	while(scanf("%d", &num)!=1)
+	{
+		printf("try again, chief: ");
+		while (getchar() != '\n'); //clear buffer to discard invalid chars?
+	}
+
+
 	
-	printf("What is the hottness?\n");
+	printf("What is the temperature?\n");
 	
 	while (scanf("%f", &tem) !=1)
 	{

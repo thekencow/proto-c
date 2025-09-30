@@ -12,19 +12,20 @@ int main ()
 
 	using std::printf;
 	using std::scanf;
-	int num = 180;
+	int num = 76;
 	char nombre[50];
 	printf("Your name?\n");
 	scanf("%49s", nombre);
 	
 	//printf("Hello MINIGW!\n");
 	printf("Hello %s\n", nombre);
-	
+	printf("What a STUPID name...\n");
 	printf("Your lucky number is: %i", num);
 
 	printf(", its address is: %p\n", (void*)&num);
 
 	printf("Aint that nifty!\n");
 	return 0;
+
 
 }

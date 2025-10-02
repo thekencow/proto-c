@@ -4,10 +4,17 @@
 int main ()
 {
 	using std::printf;
+	using std::scanf;
+	
+	char thisword[50];
 	
 	printf("Hello, World!\n");
 
-	printf("I coded this in a browser\n");
+	scanf("%s", thisword);
+
+	thisword[2]++;
+
+	printf("I coded this in a browser, %s\n", thisword);
 	
 	return 0;
 

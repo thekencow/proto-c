@@ -1,4 +1,4 @@
-//g++ -o output.exe main.cpp
+//g++ -o output.exe main.cpp -O2 -Wall
 //#include <iostream>
 //#include <stdio.h>
 #include <cstdio>

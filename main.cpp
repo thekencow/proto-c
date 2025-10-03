@@ -3,8 +3,6 @@
 //#include <stdio.h>
 #include <cstdio>
 
-
-
 int main ()
 {
 //          using std::cout;
@@ -20,7 +18,6 @@ int main ()
 	float tem;
 	printf("Your name?\n");
 	
-	
 	while(scanf("%49s", nombre) !=1) //LOOP UNTIL SUCCESSFUL READ	
 		{
 		printf("try again, chief: ");
@@ -33,8 +30,6 @@ int main ()
 		printf("try again, chief: ");
 		while (getchar() != '\n'); //clear buffer to discard invalid chars?
 	}
-
-
 	
 	printf("What is the temperature?\n");
 	
@@ -42,7 +37,6 @@ int main ()
 	{
 		printf("try again, chief: ");
 		while (getchar() != '\n'); //clear buffer to discard invalid chars?
-		
 	}
 
 	printf("Hello %s, what a BEAUTIFUL name!\n", nombre);
@@ -57,8 +51,6 @@ int main ()
 	
 	printf("Also, the lucky number is actually %x!\n", num); //display in hexadecimal
 
-
 	return 0;
-
-
 }
+

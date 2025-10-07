@@ -14,7 +14,7 @@ int main ()
 
 	thisword[2]++;
 
-	printf("I updated this via my home desktop, %s\n", thisword);
+	printf("I updated this via my ubuntu desktop, %s\n", thisword);
 	
 	return 0;
 

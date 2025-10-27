@@ -2,6 +2,8 @@
 //#include <iostream>
 //#include <stdio.h>
 #include <cstdio>
+#include <string.h>
+
 
 int main ()
 {
@@ -12,11 +14,37 @@ int main ()
 	using std::printf;
 	using std::scanf;
 	using std::getchar;
+//	using std::strcspn;
+	using std::fopen;
+	using std::fclose;
 	
 	short num;
 	char nombre[50];
+	char pombre[50];
 	char* namePtr = nombre; // Pointer to the start of nombre
 	float tem;
+	FILE* fp = fopen("namelist","r");
+	
+	if (fp == NULL)
+	{
+		printf("eff pee didn't open. bummer\n");
+		return 1;
+	}
+	
+	if(fgets(pombre, 50, fp) == NULL)
+	{
+		printf("error reading name\n");
+		fclose(fp);
+		return 1;
+	}
+//	pombre[strcspn(pombre, "\n")] = '\0'; // removes newline, i guess?
+	
+	pombre[strcspn(pombre, "WARK")] = '\0';
+	//explicitly, take the first instance of newline in the pombre array, and replace it with the null terminator character
+	//use it to mark segments of a file i guess
+	fclose(fp);
+	
+	
 	printf("Your name?\n");
 	
 /*	while(scanf("%49s", nombre) !=1) //LOOP UNTIL SUCCESSFUL READ	
@@ -71,6 +99,8 @@ int main ()
 
 	printf("Hello %s, what a BEAUTIFUL name!\n", nombre);
 
+	printf("But %s, is even better!\n", pombre);
+
 	int lucky = (count * num);
 	
 	printf("Your lucky number is: %hd", lucky);
@@ -82,6 +112,10 @@ int main ()
 	printf("The temperature can be found at %p, ain't that nifty?\n", (void*)&tem);
 	
 	printf("Also, the lucky number is actually %x!\n", lucky); //display in hexadecimal
+
+
+
+
 
 	return 0;
 }

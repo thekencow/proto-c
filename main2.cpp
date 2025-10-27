@@ -23,7 +23,8 @@ int main ()
 	thisword[0]++;
 	printf("I updated this via my work laptop, %s\n", thisword);
 	oot("Address of x:%p\n",(void*)&x);
-	oot("Whatever q is, as a p: %p\n",q);
+	oot("Whatever q is, as a p: %p\n",(void*)q);
+
 	
 	return 0;
 

@@ -5,6 +5,24 @@
 #include <string.h>
 
 
+struct Person	{
+		char name[50];
+		short lucky;
+		float temp;
+	
+};
+
+void print(const Person* p)	{
+		printf("Hello %s, lucky %hd @ %p, %1f\236F\n",
+		p->name,
+		p->lucky,
+		(void*)&p->lucky,
+		p->temp
+		);
+		
+}
+
+
 int main ()
 {
 //          using std::cout;
@@ -114,9 +132,27 @@ int main ()
 	printf("Also, the lucky number is actually %x!\n", lucky); //display in hexadecimal
 
 
-
-
-
+	printf("CLASS IS IN SESSION!\n");
+	Person p;
+	//printf("Name?\n");
+	/*
+	fgets(p.name, 50, stdin);
+	
+	p.name[strcspn(p.name, "\n")] = '\0';
+	*/
+	
+	//scanf("%49s", p.name);
+	
+	
+	printf("Name? ");  fgets(p.name, 50, stdin);
+    p.name[strcspn(p.name, "\n")] = '\0';
+	
+	printf("Number? ");	scanf("%hd", &p.lucky);
+	
+	printf("Temp? ");	scanf("%f", &p.temp);
+	
+	print(&p);
+	
 	return 0;
 }
 
